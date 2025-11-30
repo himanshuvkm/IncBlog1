@@ -37,29 +37,33 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
 
   return (
     <>
-      <section className="pink_container !min-h-[230px] flex flex-col justify-center items-center text-center px-4 md:px-8 lg:px-12">
-        <p className="tag text-sm text-muted-foreground mb-2">
-          {formatDate(post?._createdAt)}
-        </p>
+      <section className="pink_container !min-h-[230px] px-4 md:px-8 lg:px-12">
+        <div className="max-w-4xl mx-auto flex flex-col justify-center items-center text-center">
+          <p className="tag text-sm text-muted-foreground mb-2">
+            {formatDate(post?._createdAt)}
+          </p>
 
-        <h1 className="heading text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4">
-          {post.title}
-        </h1>
+          <h1 className="heading text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4">
+            {post.title}
+          </h1>
 
-        <p className="sub-heading !max-w-5xl text-lg md:text-xl text-muted-foreground leading-relaxed">
-          {post.description}
-        </p>
+          <p className="sub-heading text-lg md:text-xl text-muted-foreground leading-relaxed">
+            {post.description}
+          </p>
+        </div>
       </section>
 
       <section className="section_container py-8 px-4 md:px-8 lg:px-12">
-        <Image
-          src={post.image}
-          alt={`${post.title} thumbnail`}
-          width={1200}
-          height={600}
-          className="w-full h-auto rounded-xl object-cover shadow-lg"
-          priority
-        />
+        <div className="max-w-4xl mx-auto">
+          <Image
+            src={post.image}
+            alt={`${post.title} thumbnail`}
+            width={1200}
+            height={600}
+            className="w-full h-auto rounded-xl object-cover shadow-lg"
+            priority
+          />
+        </div>
 
         <div className="space-y-6 mt-10 max-w-4xl mx-auto">
           <div className="flex-between gap-5 items-center">
