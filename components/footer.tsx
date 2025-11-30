@@ -18,8 +18,7 @@ const Footer = () => {
               </span>
             </Link>
             <p className="text-sm text-gray-600 leading-relaxed max-w-xs">
-             Share Your Tech Insights,
-Connect With Innovators
+           Share your post, get feedback, and watch it grow with the community.
             </p>
           </div>
 
@@ -120,7 +119,7 @@ Connect With Innovators
         {/* Bottom Section */}
         <div className="pt-6 border-t border-gray-200 flex flex-col sm:flex-row justify-between items-center gap-5">
           <p className="text-sm text-gray-600 text-center sm:text-left">
-            © {currentYear} TechClout. All rights reserved.
+            © {currentYear} INCBlog. All rights reserved.
           </p>
 
           {/* Social Icons */}
