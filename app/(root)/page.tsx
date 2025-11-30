@@ -1,3 +1,7 @@
+export const revalidate = 0;
+export const dynamic = "force-dynamic";
+export const dynamicParams = true;
+
 import SearchForm from "@/components/SearchForm";
 import StartupCard, { StartupTypeCard } from "@/components/StartupCard";
 import { STARTUPS_QUERY } from "@/sanity/lib/queries";
