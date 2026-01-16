@@ -40,13 +40,13 @@ export default async function Home({
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
             </span>
-            The Entrepreneur's Hub
+            The Developer's Hub
           </div>
 
           <h1 className="heading text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-gray-900 mb-6 drop-shadow-sm">
-            Discover & Share <br className="hidden md:block" />
+            Share Your Tech Insights <br className="hidden md:block" />
             <span className="text-primary relative inline-block">
-              Next-Gen Startups
+              Connect With Innovators
               <svg className="absolute w-full h-3 -bottom-1 left-0 text-primary/30" viewBox="0 0 100 10" preserveAspectRatio="none">
                 <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="3" fill="none" />
               </svg>
