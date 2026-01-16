@@ -125,10 +125,10 @@ const Footer = () => {
           {/* Social Icons */}
           <div className="flex justify-center sm:justify-end items-center gap-5">
             {[
-              { href: "https://twitter.com", Icon: Twitter, label: "Twitter" },
-              { href: "https://github.com", Icon: Github, label: "GitHub" },
+              { href: "https://twitter.com/himanshu_9148", Icon: Twitter, label: "Twitter" },
+              { href: "https://github.com/himanshuvkm/IncBlog1", Icon: Github, label: "GitHub" },
               { href: "https://linkedin.com", Icon: Linkedin, label: "LinkedIn" },
-              { href: "mailto:contact@techclout.com", Icon: Mail, label: "Email" },
+              { href: "mailto:himanshuvkm252@gmail.com", Icon: Mail, label: "Email" },
             ].map(({ href, Icon, label }) => (
               <a
                 key={label}

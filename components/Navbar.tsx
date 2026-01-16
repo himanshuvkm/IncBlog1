@@ -21,19 +21,27 @@ const Navbar = async () => {
   console.log(session);
 
   return (
-    <header className="px-4 md:px-6 py-3.5 backdrop-blur-lg  border-b border-gray-200 font-work-sans sticky top-0 z-50">
+    <header className="px-4 md:px-6 py-4 backdrop-blur-md bg-white/80 border-b border-gray-100 font-work-sans sticky top-0 z-50 transition-all duration-300">
       <nav className="flex justify-between items-center max-w-7xl mx-auto">
-        <Link href="/" className="flex items-center hover:opacity-70 transition-opacity duration-200">
-         <span className="font-bold text-xl text-gray-900">IncBlog</span>
-        </Link>
+      <Link href="/" className="flex items-center gap-2 group">
+  <span className="font-extrabold text-2xl bg-gradient-to-r from-gray-400 to-gray-800 bg-clip-text text-transparent">
+    IncBlog
+  </span>
+</Link>
 
-        <div className="flex items-center gap-3 md:gap-4">
+
+
+        <div className="flex items-center gap-4 md:gap-6">
+          <Link href="/blog" className="text-gray-600 hover:text-primary font-medium text-sm transition-colors duration-200 hidden md:block">
+            Blogs
+          </Link>
+
           {session && session?.user ? (
             <>
               <Link href="/startup/create" className="hidden sm:inline-block">
-                <Button 
-                  variant="ghost" 
-                  size="sm" 
+                <Button
+                  variant="ghost"
+                  size="sm"
                   className="font-medium text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 transition-colors duration-200"
                 >
                   Create
@@ -41,8 +49,8 @@ const Navbar = async () => {
               </Link>
 
               <Link href="/startup/create" className="sm:hidden">
-                <Button 
-                  variant="ghost" 
+                <Button
+                  variant="ghost"
                   size="sm"
                   className="text-gray-700 hover:bg-gray-100 hover:text-gray-900 transition-colors duration-200"
                 >
@@ -57,10 +65,10 @@ const Navbar = async () => {
                 }}
                 className="hidden sm:inline-block"
               >
-                <Button 
-                  variant="ghost" 
-                  size="sm" 
-                  className="font-medium text-sm text-gray-700 hover:text-red-600 hover:bg-red-50 transition-colors duration-200"
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className="font-medium text-sm text-red-500 hover:text-red-700 hover:bg-red-50 transition-colors duration-200"
                 >
                   Logout
                 </Button>
@@ -73,8 +81,8 @@ const Navbar = async () => {
                 }}
                 className="sm:hidden"
               >
-                <Button 
-                  variant="ghost" 
+                <Button
+                  variant="ghost"
                   size="sm"
                   className="text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors duration-200"
                 >
@@ -83,12 +91,12 @@ const Navbar = async () => {
               </form>
 
               <Link href={`/user/${session?.id}`} className="flex-shrink-0">
-                <Avatar className="h-10 w-10 md:h-11 md:w-11 border border-gray-200 hover:border-gray-300 transition-colors duration-200">
+                <Avatar className="h-10 w-10 md:h-11 md:w-11 ring-2 ring-gray-100 hover:ring-primary/20 transition-all duration-300">
                   <AvatarImage
                     src={session?.user?.image || ""}
                     alt={session?.user?.name || ""}
                   />
-                  <AvatarFallback className="bg-gray-100 text-gray-700 font-semibold text-sm">
+                  <AvatarFallback className="bg-gradient-to-br from-gray-100 to-gray-200 text-gray-700 font-bold text-sm">
                     {session?.user?.name?.charAt(0)?.toUpperCase() || "U"}
                   </AvatarFallback>
                 </Avatar>
@@ -101,9 +109,9 @@ const Navbar = async () => {
                 await signIn("github");
               }}
             >
-              <Button 
-                size="sm" 
-                className="font-semibold text-sm bg-blue-600 hover:bg-blue-700 text-white transition-colors duration-200 px-5 rounded-lg"
+              <Button
+                size="sm"
+                className="font-semibold text-sm bg-primary hover:bg-blue-700 text-white shadow-md hover:shadow-lg transition-all duration-200 px-6 rounded-full"
               >
                 Login
               </Button>
